@@ -1,0 +1,34 @@
+@startuml
+start
+:**ввод** a;
+:**ввод** b;
+:r,d,l,s;
+:Pi=3.14;
+switch (a)
+case (1)
+:r = b;
+:d = 2 * r;
+:l = 2 * Pi * r;
+:s = Pi * r * r;
+case (2)
+:d = b;
+:r = d / 2;
+:l = 2 * Pi * r;
+:s= Pi * r * r;
+case (3)
+:l = b;
+:r = l / (2 * Pi);
+:d = 2 * r;
+:s = Pi * r * r;
+case (4)
+:s = b;
+:r = Math.sqrt(s / Pi);
+:d = 2 * r;
+:l = 2 * Pi * r;
+case( default)
+:**вывод** номер элемента должен быть в диапазоне 1-4;
+:return;
+endswitch      
+:**вывод** Радиус, диаметр, длина, площадь; 
+stop
+@enduml

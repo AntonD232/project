@@ -1,0 +1,16 @@
+@startuml
+start
+:**ввод** x;
+:**ввод** y;
+if (x>=1?) then(да)
+:y=x*(Math.pow(x,4)+3*x)+Math.log(Math.PI+x);
+else(нет) 
+if(x<0) then(да)
+:y=Math.pow(x,5)-10-Math.pow(Math.PI + x , 1.0/4.0);
+else (нет)
+:y=Math.pow(Math.pow(x,3)+3,3)-Math.sqrt(0.5*Math.PI+x);
+endif
+:**вывод** y;
+endif
+stop
+@enduml

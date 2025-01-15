@@ -1,0 +1,28 @@
+@startuml
+start
+:**ввод** num;
+:description;
+if (num<=0 || num>=1000 ) then(да)
+:description = Ошибка: число должно быть от 1 до 999;
+else(нет)
+if (num<=9) then(да)
+:description = однозначное;
+else (нет)
+if (num<=99) then(да)
+:description = двузначное;
+else (нет)
+:description = трехзначное;
+endif
+if(num % 2 == 0 && num >0 && num <1000) then(да)
+:description += четное число;
+else (нет) 
+if(num % 2 != 0 && num >0 && num <1000) then(да)
+:description += нечетное число;
+else (нет) 
+endif
+endif
+endif
+endif
+:**вывод** description;
+stop
+@enduml

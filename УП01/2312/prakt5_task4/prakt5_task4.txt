@@ -1,0 +1,11 @@
+@startuml
+start
+:n = data.get(1);
+:m= data.get(0);
+:s = 0;
+while(int k=n; k<=m;k++) is(да)
+:s+=k;
+endwhile
+:**вывод** s; 
+stop
+@enduml

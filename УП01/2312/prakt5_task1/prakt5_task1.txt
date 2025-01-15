@@ -1,0 +1,17 @@
+@startuml
+start
+:**ввод** n;
+:max = 0;
+while (int i = 1; i <= n; i++) is(да)
+:m = data.get(i);
+if (m % 10 == 3 && m > max) then(да)
+:max = m;
+endif
+endwhile
+if (max != 0) then(да)
+:**вывод** max;
+else(нет)
+:**вывод** Чисел оканчивающихся на 3 нет;
+endif 
+stop
+@enduml

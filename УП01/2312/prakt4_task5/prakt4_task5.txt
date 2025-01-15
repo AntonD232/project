@@ -1,0 +1,16 @@
+@startuml
+start
+:**ввод** p;
+:s = 1000;
+:k = 0;
+if (p <= 0 && p >= 25) then(да)
+:**вывод** Ошибка: P должно быть в диапазоне (0, 25);
+:return;
+endif
+while (s < 1100) is(да)
+:s += s * (p / 100);
+:k++;
+endwhile
+:**вывод** k, s; 
+stop
+@enduml

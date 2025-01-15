@@ -1,0 +1,10 @@
+@startuml
+start
+:n = data.get(1);
+:m= data.get(0);
+:n1=(n-1)/2;
+:m1=m/2;
+:s=m1-n1;
+:**вывод** s; 
+stop
+@enduml

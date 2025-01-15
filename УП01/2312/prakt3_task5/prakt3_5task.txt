@@ -1,0 +1,15 @@
+@startuml
+start
+:**ввод** x;
+:**ввод** y;
+if (Math.pow(x,2)+Math.pow(y,2)==Math.pow(10,2)|| y==-x?) then(да)
+:**вывод** на границе;
+else(нет) 
+if(Math.pow(x,2)+Math.pow(y,2)<Math.pow(10,2)&& y>-x) then(да)
+:**вывод** da;
+else (нет)
+:**вывод** net;
+endif
+endif
+stop
+@enduml

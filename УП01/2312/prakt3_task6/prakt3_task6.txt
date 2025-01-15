@@ -1,0 +1,21 @@
+@startuml
+start
+:**ввод** num;
+:description;
+if (num == 0) then(да)
+:description = нулевое число;
+else(нет)
+if (num % 2 == 0) then(да)
+:description = положительное четное число;
+else (нет)
+:description = положительное нечетное число;
+if(num % 2 == 0) then(да)
+:description =  отрицательное четное число;
+else (нет) 
+:description = отрицательное нечетное число;
+endif
+endif
+endif
+:**вывод** description;
+stop
+@enduml

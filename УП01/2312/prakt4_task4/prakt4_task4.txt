@@ -1,0 +1,16 @@
+@startuml
+start
+:**ввод** a;
+:k = a;
+:s = 1;
+if (a <= 0) then(да)
+:**вывод** число должно быть больше 0;
+:return;
+endif
+while (k > 0) is(да)
+:s *=k;
+:k -= 2;
+endwhile
+:**вывод** s; 
+stop
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+start
+:**ввод** a;
+:**ввод** b;
+: s;
+switch (a)
+case (1)
+:b=b/10;
+:s=String.valueOf(b);
+case (2)
+:b=b*1000;
+:s=String.valueOf(b);
+case (3)
+:s=String.valueOf(b);
+case (4)
+:b=b/1000;
+:s=String.valueOf(b);
+case (5)
+:b=b/100;
+:s= String.valueOf(b);
+case (default)
+:s= ошибка дон;
+endswitch
+:**вывод** длина отрезка в метрах: s;       
+stop
+@enduml

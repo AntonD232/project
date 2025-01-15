@@ -1,0 +1,14 @@
+@startuml
+start
+:**ввод** n;
+:min;
+while (int i = 1; i <= n; i++) is(да)
+:m = data.get(i);
+if (m % 3 == 0 && m < min && m != 0) then(да)
+:min = m;
+endif
+:**вывод** min;
+endwhile
+:**вывод**;
+stop
+@enduml

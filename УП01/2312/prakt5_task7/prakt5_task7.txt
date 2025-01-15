@@ -1,0 +1,11 @@
+@startuml
+start
+:x=1;
+:n=0;
+:s = 0.0;
+while(int i=1; i<=x;i++) is(да)
+:s += Math.pow(i, n);
+endwhile
+:**вывод** s;
+stop
+@enduml

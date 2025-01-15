@@ -1,0 +1,13 @@
+@startuml
+start
+:x = data.get(1);
+:n= data.get(0);
+:factor=1;
+:s = 1;
+while(int k=1; k<=n;k++) is(да)
+:factor*=k;
+:s += (Math.pow(x, k)*1.0) / factor;
+endwhile
+:**вывод** s; 
+stop
+@enduml

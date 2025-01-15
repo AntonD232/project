@@ -1,0 +1,48 @@
+@startuml
+start
+:**ввод** a;
+:**ввод** b=a/10;
+:**ввод** c= a %10;
+:des;
+switch (b)
+case (2)
+:des=двадцать;
+case (3)
+: des=тридцать;
+case (4)
+:des=сорок;
+case (5)
+:des=пятьдесят;
+case (6)
+:des=шестьдесят;
+case (default)
+:des= ошибка, неверный диапозон;
+endswitch
+if(b>=2&& b<=6) then(да)
+switch (c)
+case (0)
+:des+=лет;
+case (1)
+:des+=один год;
+case (2)
+:des+=два года;
+case (3)
+:des+=три года;
+case (4)
+:des+=четыре года;
+case (5)
+:des+=пять лет;
+case (6)
+:des+=шесть лет;
+case (7)
+:des+=семь лет;
+case (8)
+:des+=восемь лет;
+case (9)
+:des+=девять лет;
+endswitch  
+else(нет)
+endif    
+:**вывод** возраст: des; 
+stop
+@enduml 

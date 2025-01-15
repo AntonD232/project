@@ -1,0 +1,18 @@
+@startuml
+start
+:**ввод** n;
+if (n <= 0) then(да)
+:**вывод** число должно быть больше 0;
+:return;
+endif
+:p = false;
+while (n > 0) is(да)
+:s = n % 10;
+if (s == 5) then(да) 
+:p = true;
+endif
+:n = n / 10;
+endwhile
+:**вывод** p; 
+stop
+@enduml

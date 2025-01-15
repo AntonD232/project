@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.davydov.davydov_task1.controller.threeController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane alignment="CENTER" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="68.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="518.0" minWidth="10.0" prefWidth="518.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="72.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Email:  " textFill="#505050" />
+                        <TextField fx:id="emailField" prefHeight="27.0" prefWidth="209.0" promptText="Enter your email address" style="-fx-background-radius: 0; -fx-background-color: #ffffff; -fx-border-color: #505050;">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#loginBtnOnAction" style="-fx-background-radius: 5;" text="Login">
+                           <HBox.margin>
+                              <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="CancelBtn" mnemonicParsing="false" onAction="#CancelBtnOnaction" style="-fx-background-radius: 5;" text="Cancel">
+                           <HBox.margin>
+                              <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label alignment="CENTER" text="Password:  " textAlignment="RIGHT" textFill="#505050" translateX="-11.0" />
+                        <PasswordField fx:id="pasField" alignment="TOP_LEFT" prefHeight="27.0" prefWidth="209.0" promptText="Enter your password" style="-fx-background-radius: 0; -fx-background-color: #ffffff; -fx-border-color: #505050;" translateX="-11.0">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                     <rotationAxis>
+                        <Point3D x="10.0" z="1.0" />
+                     </rotationAxis>
+                  </HBox>
+                  <VBox alignment="CENTER" GridPane.columnIndex="1">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="234.0" text="Форма авторизации" textAlignment="CENTER" textFill="#505050">
+                           <font>
+                              <Font name="Arial" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="62.0" prefWidth="497.0" text="Пожалуйста, авторизуйтесь в системе, используя ваш адрес электронной почты и пароль." textAlignment="CENTER" textFill="#505050" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </center>
+         <top>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #505050;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="nazadBtn" mnemonicParsing="false" onAction="#nazadBtnOnAction" prefHeight="25.0" prefWidth="60.0" style="-fx-background-radius: 5;" text="Назад">
+
+                     <HBox.margin>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label prefHeight="54.0" prefWidth="484.0" text="MARATHON SKILLS 2016" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="676.0" style="-fx-background-color: #505050;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="dolabel" text="0 дней 0 часов и 0 минут до старта марафона!" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
