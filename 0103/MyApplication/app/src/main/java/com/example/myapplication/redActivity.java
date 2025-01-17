@@ -21,8 +21,9 @@ public class redActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_red);
         otvet=findViewById(R.id.otvett);
-        int resmes = MainActivity.ress;
-        otvet.setText("правильный ответ:" + resmes);
+        Bundle arg=getIntent().getExtras();
+        int resmes= arg.getInt("key");
+        otvet.setText("правильный ответ:"+resmes );
         ok1=findViewById(R.id.button2);
         ok1.setOnClickListener(v -> okey(v));
     }

@@ -17,12 +17,12 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    public static int ress;
+    private int ress;
     private TextView primer, prav, neprav, bal;
     private Button reshit;
     private EditText rezult;
     private int one, two;
-    public static int pr, ne, bl = 0;
+    private static int pr, ne, bl = 0;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -39,28 +39,37 @@ public class MainActivity extends AppCompatActivity {
         reshit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int b = Integer.parseInt(rezult.getText().toString());
-                if (ress == b) {
-                    Perevod(v);
-                    pr+=1;
-                    bl+=125;
+                try {
+                    int b = Integer.parseInt(rezult.getText().toString());
+                    if (ress == b) {
+                        Perevod(v);
+                        pr += 1;
+                        bl += 150;
 
-                } else {
-                    Perevodd(v);
-                    ne+=1;
-                    bl-=125;
+                    } else {
+                        Perevodd(v);
+                        ne += 1;
+                        bl -= 150;
+                    }
+                } catch (Exception e) {
+                    reshit.setText("Введите число");
                 }
             }
 
         });
+        prav.setText("Правильно:"+pr);
+        neprav.setText("Неправильно:"+ne);
+        bal.setText("Количество очков:"+bl);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         Random r = new Random();
         one = r.nextInt(10 - 2) + 2;
         two = r.nextInt(10 - 2) + 2;
-        primer.setText(one + "*" + two);
+        primer.setText(one + "*" + two+"=");
         ress = one * two;
-        prav.setText("правильно:"+pr);
-        neprav.setText("неправильно:"+ne);
-        bal.setText("количество очков:"+bl);
     }
 
     public void Perevod(View v) {
@@ -70,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void Perevodd(View v) {
         Intent intent = new Intent(this, redActivity.class);
+        intent.putExtra("key", ress);
         startActivity(intent);
     }
 }

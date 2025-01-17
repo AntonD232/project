@@ -15,7 +15,7 @@ import ru.davydov.davydov_task1.util.Manager;
 
 
 import static ru.davydov.davydov_task1.util.Manager.showSecondStage;
-import static ru.davydov.davydov_task1.util.Manager.showSsecondStage;
+
 
 
 public class nineController extends AnchorPane {
@@ -44,12 +44,12 @@ public class nineController extends AnchorPane {
 
     @FXML
     void konBtnOnAction(ActionEvent event) {
-        showSsecondStage("dp-view.fxml");
+
     }
 
     @FXML
     void logoutBtnOnAction(ActionEvent event) {
-        showSecondStage("gl-view.fxml");
+
     }
 
     @FXML
@@ -64,7 +64,7 @@ public class nineController extends AnchorPane {
 
     @FXML
     void regBtnOnaction(ActionEvent event) {
-        showSecondStage("5sl-view.fxml");
+
     }
 
     @FXML

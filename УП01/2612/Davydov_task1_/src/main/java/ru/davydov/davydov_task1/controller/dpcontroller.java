@@ -7,9 +7,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-import java.awt.*;
 
-import static java.awt.Dialog.ModalityType.APPLICATION_MODAL;
+
+
 
 public class dpcontroller  {
     private void openModalWindow() {
