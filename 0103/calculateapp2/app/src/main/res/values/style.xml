@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyButtonPitch">
+        <item name="android:textColor">@color/blue</item>
+        <item name="backgroundTint">@color/pitch</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_margin">2dp</item>
+
+    </style>
+    <style name="textwhite">
+        <item name="android:textColorHint">@color/whiteplus</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="textblack">
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="textblue">
+        <item name="android:textColorHint">@color/blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">calculateapp2</string>
+    <string name="rez">Режим:</string>
+    <string name="strt">СТАРТ</string>
+    <string name="sloznost">Сложность:</string>
+    <string name="zad">Задача:</string>
+    <string name="slozh">сложение</string>
+    <string name="vic">вычитание</string>
+    <string name="umn">умножение</string>
+    <string name="del">деление</string>
+    <string name="omin">1 мин</string>
+    <string name="tmin">3 мин</string>
+    <string name="pmin">5 мин</string>
+    <string name="svob">свободный</string>
+    <string name="dvaprim">20 примеров</string>
+    <string name="pisprim">50 примеров</string>
+    <string name="stoprim">100 примеров</string>
+    <string name="rez_en">Mode:</string>
+    <string name="strt_en">START</string>
+    <string name="sloznost_en">Difficulty:</string>
+    <string name="zad_en">Task:</string>
+    <string name="slozh_en">addition</string>
+    <string name="vic_en">subtraction</string>
+    <string name="umn_en">multiplication</string>
+    <string name="del_en">division</string>
+    <string name="omin_en">1 min</string>
+    <string name="tmin_en">3 min</string>
+    <string name="pmin_en">5 min</string>
+    <string name="svob_en">free</string>
+    <string name="dvaprim_en">20 examples</string>
+    <string name="pisprim_en">50 examples</string>
+    <string name="stoprim_en">100 examples</string>
+</resources>
