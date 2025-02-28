@@ -19,7 +19,8 @@ public class eightController {
 
     @FXML
     void okbtnOnAction(ActionEvent event) {
-        showSecondStage("9sl-view.fxml");
+        showSecondStage("9sl-view.fxml", );
     }
+
 
 }

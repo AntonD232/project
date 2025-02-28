@@ -5,37 +5,40 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".redActivity"
-    android:background="#610000">
+    android:background="#C52626"
+    tools:context=".redActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Неверно("
-            android:textSize="40dp"
-            android:gravity="center"
             android:textColor="#d9d9d9"
-            />
+            android:textSize="40dp" />
+
         <TextView
+            android:id="@+id/otvett"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="правильный ответ:"
-            android:textSize="40dp"
             android:gravity="center"
+            android:text="правильный ответ:"
             android:textColor="#d9d9d9"
-            android:id="@+id/otvett"
-            >
-        </TextView>
+            android:textSize="40dp"></TextView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
+
             <Button
                 android:id="@+id/button2"
+                style="@android:style/Widget.Material.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -46,9 +49,9 @@
                 android:layout_width="100dp"
                 android:layout_height="250dp"
                 android:layout_weight="1"
-
-                app:srcCompat="@drawable/f378ca6c573fcd22e02aefd3af50d820"
-                tools:srcCompat="@drawable/f378ca6c573fcd22e02aefd3af50d820" />
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/red"
+                tools:srcCompat="@drawable/red" />
 
         </LinearLayout>
 

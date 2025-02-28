@@ -5,29 +5,33 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".zelActivity"
-    android:background="#001a00">
+    android:background="#60B439"
+    tools:context=".grnActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Верно!"
-            android:textSize="40dp"
             android:gravity="center"
+            android:text="Верно!"
             android:textColor="#d9d9d9"
-            >
+            android:textSize="40dp">
 
         </TextView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
+
             <Button
                 android:id="@+id/button2"
+                style="@android:style/Widget.Material.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -38,8 +42,8 @@
                 android:layout_width="100dp"
                 android:layout_height="300dp"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/fb5b88d97e4463feaaec222155e39b28"
-                app:srcCompat="@drawable/fb5b88d97e4463feaaec222155e39b28" />
+                app:srcCompat="@drawable/grn"
+                tools:srcCompat="@drawable/grn" />
 
         </LinearLayout>
 

@@ -8,34 +8,37 @@
     android:background="@drawable/soplya"
     tools:context=".MainActivity">
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
     <ImageView
         android:id="@+id/cat"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="170dp"
+        android:maxHeight="200dp"
+        android:maxWidth="200dp"
         android:layout_margin="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cat"
-        tools:srcCompat="@drawable/cat"></ImageView>
-
+        app:srcCompat="@drawable/cat">
+    </ImageView>
     <LinearLayout
         android:id="@+id/zad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="11dp"
         android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp">
 
         <TextView
             android:id="@+id/zadacha"
+            style="@style/textwhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/zad"
-            android:textSize="16sp"
-            style="@style/textwhite"></TextView>
+            android:textSize="16sp"></TextView>
 
         <Button
             android:id="@+id/slog"
@@ -43,7 +46,6 @@
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="@string/slozh"></Button>
-
         <Button
             android:id="@+id/vich"
             style="@style/MyButtonPitch"
@@ -52,7 +54,6 @@
             android:text="@string/vic">
 
         </Button>
-
         <Button
             android:id="@+id/ymn"
             style="@style/MyButtonPitch"
@@ -61,269 +62,237 @@
             android:text="@string/umn">
 
         </Button>
-
         <Button
             android:id="@+id/del"
             style="@style/MyButtonPitch"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="@string/del">
-
         </Button>
     </LinearLayout>
-
-    <LinearLayout
+    <GridLayout
         android:id="@+id/pos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="11dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@+id/zad"
-        app:layout_constraintTop_toTopOf="parent">
-
+        android:layout_marginTop="20dp">
         <TextView
             android:id="@+id/slozn"
-            android:layout_width="wrap_content"
+            style="@style/textwhite"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/sloznost"
-            style="@style/textwhite"
             android:textSize="16sp"
-            ></TextView>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
+            android:layout_row="0"></TextView>
             <Button
-
                 android:id="@+id/xy1"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="X+Y"></Button>
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X+Y"
+                android:layout_row="1"
+                android:layout_column="0">
+            </Button>
             <Button
                 android:id="@+id/xxy1"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="XX+Y"></Button>
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XX+Y"
+                android:layout_row="1"
+                android:layout_column="1">
+            </Button>
             <Button
                 android:id="@+id/xxyy1"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="XX+YY"></Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XX+YY"
+                android:layout_row="1"
+                android:layout_column="2">
+            </Button>
             <Button
                 android:id="@+id/xy2"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="X-Y"></Button>
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X-Y"
+                android:layout_row="2"
+                android:layout_column="0"></Button>
             <Button
                 android:id="@+id/xxy2"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="XX-Y"></Button>
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XX-Y"
+                android:layout_row="2"
+                android:layout_column="1"></Button>
             <Button
                 android:id="@+id/xxyy2"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="XX-YY"></Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XX-YY"
+                android:layout_row="2"
+                android:layout_column="2"></Button>
             <Button
                 android:id="@+id/xy3"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="X*Y"></Button>
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X*Y"
+                android:layout_row="3"
+                android:layout_column="0"></Button>
             <Button
                 android:id="@+id/xxy3"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="XX*Y"></Button>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XX*Y"
+                android:layout_row="3"
+                android:layout_column="1"></Button>
             <Button
                 android:id="@+id/xy4"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="X/Y">
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X/Y"
+                android:layout_row="4"
+                android:layout_column="0">
             </Button>
-
             <Button
                 android:id="@+id/xxy4"
                 style="@style/MyButtonPitch"
-                android:layout_width="93dp"
-                android:layout_height="48dp"
-                android:text="XX/Y"></Button>
-        </LinearLayout>
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/rez"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/rez"
-    style="@style/textblue"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomll"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
-
-    <LinearLayout
-        android:id="@+id/bottomll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-       >
-
-        <Button
-            android:id="@+id/onemin"
-            style="@style/MyButtonPitch"
-            android:layout_width="120dp"
-            android:layout_height="55dp"
-            android:text="@string/omin" />
-
-        <Button
-            android:id="@+id/threemin"
-            style="@style/MyButtonPitch"
-            android:layout_width="120dp"
-            android:layout_height="55dp"
-            android:text="@string/tmin" />
-
-        <Button
-            android:id="@+id/fivemin"
-            style="@style/MyButtonPitch"
-            android:layout_width="120dp"
-            android:layout_height="55dp"
-            android:text="@string/pmin" />
-
-        <Button
-            android:id="@+id/svob"
-            style="@style/MyButtonPitch"
-            android:layout_width="125dp"
-            android:layout_height="55dp"
-            android:text="@string/svob" />
-
-        <Button
-            android:id="@+id/dvadprim"
-            style="@style/MyButtonPitch"
-            android:layout_width="120dp"
-            android:layout_height="55dp"
-            android:text="@string/dvaprim" />
-
-        <Button
-            android:id="@+id/piatprim"
-            style="@style/MyButtonPitch"
-            android:layout_width="120dp"
-            android:layout_height="55dp"
-            android:text="@string/pisprim" />
-
-        <Button
-            android:id="@+id/stoprim"
-            style="@style/MyButtonPitch"
-            android:layout_width="120dp"
-            android:layout_height="55dp"
-            android:text="@string/stoprim" />
-
-
-    </LinearLayout>
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XX/Y"
+                android:layout_row="4"
+                android:layout_column="1">
+            </Button>
+    </GridLayout>
     <Button
         android:id="@+id/start"
         style="@style/MyButtonPitch"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:minWidth="140dp"
+        android:layout_height="wrap_content"
+        android:minHeight="70dp"
         android:text="@string/strt"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintStart_toEndOf="@+id/pos"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
-
+        android:layout_margin="20dp"/>
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="90dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        android:layout_marginTop="20dp">
         <Button
 
             android:id="@+id/ru"
             style="@style/MyButtonPitch"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ru"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-
-            app:layout_constraintEnd_toEndOf="parent"></Button>
-
+            android:minWidth="70dp"
+            android:text="ru">
+        </Button>
         <Button
-
             android:id="@+id/en"
             style="@style/MyButtonPitch"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="en"
-
-            app:layout_constraintEnd_toEndOf="parent"
-
-
-            ></Button>
+            android:minWidth="70dp">
+        </Button>
     </LinearLayout>
+</LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/rez"-->
+<!--        style="@style/textblue"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:hint="@string/rez"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottomll"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent" />-->
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+<!--    <LinearLayout-->
+<!--        android:id="@+id/bottomll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/onemin"-->
+<!--            style="@style/MyButtonPitch"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minHeight="50dp"-->
+<!--            android:minWidth="100dp"-->
+<!--            android:text="@string/omin" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/threemin"-->
+<!--            style="@style/MyButtonPitch"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minHeight="50dp"-->
+<!--            android:minWidth="100dp"-->
+<!--            android:text="@string/tmin" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/fivemin"-->
+<!--            style="@style/MyButtonPitch"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minHeight="50dp"-->
+<!--            android:minWidth="100dp"-->
+<!--            android:text="@string/pmin" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/svob"-->
+<!--            style="@style/MyButtonPitch"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minHeight="50dp"-->
+<!--            android:minWidth="100dp"-->
+<!--            android:text="@string/svob" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/dvadprim"-->
+<!--            style="@style/MyButtonPitch"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minHeight="50dp"-->
+<!--            android:minWidth="100dp"-->
+<!--            android:text="@string/dvaprim" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/piatprim"-->
+<!--            style="@style/MyButtonPitch"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minHeight="50dp"-->
+<!--            android:minWidth="100dp"-->
+<!--            android:text="@string/pisprim" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/stoprim"-->
+<!--            style="@style/MyButtonPitch"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minHeight="50dp"-->
+<!--            android:minWidth="100dp"-->
+<!--            android:text="@string/stoprim" />-->
+
+
+<!--    </LinearLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

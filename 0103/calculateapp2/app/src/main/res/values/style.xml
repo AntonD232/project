@@ -5,9 +5,11 @@
         <item name="backgroundTint">@color/pitch</item>
         <item name="cornerRadius">16dp</item>
         <item name="strokeWidth">3dp</item>
+        <item name="android:minHeight">49dp</item>
+        <item name="android:minWidth">93dp</item>
         <item name="strokeColor">@color/white</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:layout_margin">2dp</item>
+        <item name="autoSizeMinTextSize">10sp</item>
 
     </style>
     <style name="textwhite">

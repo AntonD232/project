@@ -13,14 +13,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Random;
 
-public class zelActivity extends AppCompatActivity {
+public class grnActivity extends AppCompatActivity {
     private Button ok1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_zel);
+        setContentView(R.layout.activity_grn);
         ok1=findViewById(R.id.button2);
         ok1.setOnClickListener(v -> okey(v));
 

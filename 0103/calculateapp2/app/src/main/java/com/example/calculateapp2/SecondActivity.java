@@ -15,6 +15,7 @@ import com.example.calculateapp2.databinding.ActivityMainBinding;
 import com.example.calculateapp2.databinding.ActivitySecondBinding;
 
 import java.util.Random;
+import java.util.concurrent.ExecutionException;
 
 public class SecondActivity extends AppCompatActivity {
     private ActivitySecondBinding binding;
@@ -59,8 +60,6 @@ public class SecondActivity extends AppCompatActivity {
     void rezhim() {
         Bundle argg = getIntent().getExtras();
         rezhimi = argg.getInt("5");
-
-
         switch (rezhimi) {
             case 1:
                 timerrr(60000);
@@ -84,8 +83,6 @@ public class SecondActivity extends AppCompatActivity {
                 break;
 
         }
-
-
     }
 
     void timerrr(int milll) {
@@ -204,16 +201,20 @@ public class SecondActivity extends AppCompatActivity {
 
     void srav() {
         double sum = Double.parseDouble(binding.edt.getText().toString());
-        if (result == sum) {
-            resheniee();
-            ii++;
-            schet();
-            binding.prav.setText("Правильных:" + ii);
-        } else {
-            resheniee();
+        try {
+            if (result == sum) {
+                resheniee();
+                ii++;
+                schet();
+                binding.prav.setText("Правильных:" + ii);
+            } else {
+                resheniee();
+                iii++;
+                schet();
+                binding.neprav.setText("Неправильных:" + iii);
+            }
+        } catch (Exception e) {
             iii++;
-            schet();
-            binding.neprav.setText("Неправильных:" + iii);
         }
     }
 

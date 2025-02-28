@@ -16,7 +16,7 @@
             android:name=".redActivity"
             android:exported="false" />
         <activity
-            android:name=".zelActivity"
+            android:name=".grnActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

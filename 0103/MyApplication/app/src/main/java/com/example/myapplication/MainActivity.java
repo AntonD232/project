@@ -36,32 +36,28 @@ public class MainActivity extends AppCompatActivity {
         bal = findViewById(R.id.ballView);
         neprav = findViewById(R.id.nepravView);
         rezult = findViewById(R.id.editText);
-        reshit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    int b = Integer.parseInt(rezult.getText().toString());
-                    if (ress == b) {
-                        Perevod(v);
-                        pr += 1;
-                        bl += 150;
-
-                    } else {
-                        Perevodd(v);
-                        ne += 1;
-                        bl -= 150;
-                    }
-                } catch (Exception e) {
-                    reshit.setText("Введите число");
-                }
-            }
-
-        });
+        reshit.setOnClickListener((view)->onClick(view));
         prav.setText("Правильно:"+pr);
         neprav.setText("Неправильно:"+ne);
         bal.setText("Количество очков:"+bl);
     }
+    void onClick(View v) {
+        try {
+            int b = Integer.parseInt(rezult.getText().toString());
+            if (ress == b) {
+                Perevod(v);
+                pr += 1;
+                bl += 150;
 
+            } else {
+                Perevodd(v);
+                ne += 1;
+                bl -= 150;
+            }
+        } catch (Exception e) {
+            reshit.setText("Введите число");
+        }
+    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -73,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Perevod(View v) {
-        Intent intent = new Intent(this, zelActivity.class);
+        Intent intent = new Intent(this, grnActivity.class);
         startActivity(intent);
     }
 

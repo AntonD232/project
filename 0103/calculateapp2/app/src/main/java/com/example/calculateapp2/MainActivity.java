@@ -47,13 +47,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void rezhim(){
-        onem=updateButtonStates(binding.onemin);
-        twom=updateButtonStates(binding.threemin);
-        fivem=updateButtonStates(binding.fivemin);
-        svobm=updateButtonStates(binding.svob);
-        dvap=updateButtonStates(binding.dvadprim);
-        fivep=updateButtonStates(binding.piatprim);
-        stop=updateButtonStates(binding.stoprim);
         binding.onemin.setOnClickListener(v ->{
             toggleButtonState(binding.onemin, onem);
             twom=updateButtonStates(binding.threemin);
@@ -140,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     int proverka(boolean isPressed, int znachenie) {
-        isPressed=false;
         isPressed=!isPressed;
         int sss;
         if (isPressed ) {
