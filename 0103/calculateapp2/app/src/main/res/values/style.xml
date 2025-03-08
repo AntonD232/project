@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="MyButtonPitch">
-        <item name="android:textColor">@color/blue</item>
-        <item name="backgroundTint">@color/pitch</item>
+        <item name="android:textColor">@color/brown</item>
+        <item name="backgroundTint">@color/greenwh</item>
         <item name="cornerRadius">16dp</item>
-        <item name="strokeWidth">3dp</item>
+        <item name="strokeWidth">5dp</item>
         <item name="android:minHeight">49dp</item>
         <item name="android:minWidth">93dp</item>
-        <item name="strokeColor">@color/white</item>
+        <item name="strokeColor">@color/greend</item>
         <item name="android:textSize">14sp</item>
         <item name="autoSizeMinTextSize">10sp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MyButtonPitchh">
+        <item name="android:textColor">@color/brown</item>
+        <item name="backgroundTint">@color/greenwh</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="strokeWidth">5dp</item>
+        <item name="android:minHeight">49dp</item>
+        <item name="android:minWidth">93dp</item>
+        <item name="strokeColor">@color/greend</item>
+        <item name="android:textSize">14sp</item>
+        <item name="autoSizeMinTextSize">10sp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
-    </style>
     <style name="textwhite">
-        <item name="android:textColorHint">@color/whiteplus</item>
+        <item name="android:textColorHint">@color/brown</item>
         <item name="android:textStyle">bold</item>
     </style>
-    <style name="textblack">
-        <item name="android:textColorHint">@color/black</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-    <style name="textblue">
-        <item name="android:textColorHint">@color/blue</item>
-        <item name="android:textStyle">bold</item>
-    </style>
+
 </resources>

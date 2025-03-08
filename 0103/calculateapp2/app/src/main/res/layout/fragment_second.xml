@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/nazadd"
+        style="@style/MyButtonPitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="назад"
+    >
+    </Button>
+
+    <TextView
+        android:id="@+id/obsh"
+        style="@style/textwhite"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Решено:0"
+   />
+
+
+
+    <TextView
+        android:id="@+id/prav"
+        style="@style/textwhite"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Правильных:0"
+   />
+
+    <TextView
+        android:id="@+id/neprav"
+        style="@style/textwhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="Неправильных:0"
+/>
+
+    <TextView
+        android:id="@+id/priner"
+        style="@style/textwhite"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="пример"
+   />
+
+    <EditText
+        android:id="@+id/edt"
+        style="@style/textwhite"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:hint="O"
+        android:minHeight="48dp"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/reshenie"
+        style="@style/MyButtonPitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="решить"
+      />
+</LinearLayout>
+
+</FrameLayout>

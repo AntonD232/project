@@ -3,7 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#040a34</color>
-    <color name="pitch">#F7B592</color>
+    <color name="greenwh">#d4ca8c</color>
     <color name="whiteplus">#f5efe5</color>
-    <color name="pitchh">#fce1d4</color>
+    <color name="greend">#a7a157</color>
+    <color name="brown">#94623f</color>
+
 </resources>
