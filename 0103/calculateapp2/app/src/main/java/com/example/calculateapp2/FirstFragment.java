@@ -15,7 +15,7 @@ import android.widget.Button;
 import com.example.calculateapp2.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
-    int slogS, vichS, umnS, delS;
+    int[] zadacha = new int[4];
     int rezhim ;
     boolean x1isButtonPressed, xx1isButtonPressed, xxyyisButtonPressed, x3isButtonPressed, xx3isButtonPressed;
     boolean x2isButtonPressed, xx2isButtonPressed, xxyy2isButtonPressed, x4isButtonPressed, xx4isButtonPressed;
@@ -24,7 +24,7 @@ public class FirstFragment extends Fragment {
     private int pitchh;
     private int pitch;
     private int whiteplus;
-    private int blue;
+
 
     private FragmentFirstBinding binding;
 
@@ -47,14 +47,11 @@ public class FirstFragment extends Fragment {
         binding.start.setOnClickListener(view -> {
             SecondFragment secondFragment = new SecondFragment();
             Bundle args = new Bundle();
-            args.putInt("1", slogS);
-            args.putInt("2", vichS);
-            args.putInt("4", delS);
-            args.putInt("3", umnS);
+            args.putIntArray("1",zadacha);
             args.putInt("5", rezhim);
             secondFragment.setArguments(args);
             androidx.fragment.app.FragmentTransaction ft = getParentFragmentManager().beginTransaction();
-            if ((slogS != 0 || vichS != 0 || delS != 0 || umnS != 0) && rezhim != 0)
+            if ((zadacha[0] != 0 || zadacha[1] != 0 || zadacha[2] != 0 || zadacha[3] != 0) && rezhim != 0)
                 ft.replace(R.id.framell, secondFragment);
             ft.commit();
         });
@@ -64,12 +61,12 @@ public class FirstFragment extends Fragment {
     void rezhim() {
         binding.onemin.setOnClickListener(v -> {
             toggleButtonState(binding.onemin, onem);
-            finalupdate(binding.threemin,binding.threemin,binding.fivemin,binding.dvadprim,binding.piatprim,binding.stoprim);
+            finalupdate(binding.threemin,binding.svob,binding.fivemin,binding.dvadprim,binding.piatprim,binding.stoprim);
             rezhim =  1;
         });
         binding.threemin.setOnClickListener(v -> {
             toggleButtonState(binding.threemin, threeM);
-            finalupdate(binding.onemin,binding.fivemin,binding.fivemin,binding.dvadprim,binding.piatprim,binding.stoprim);
+            finalupdate(binding.onemin,binding.fivemin,binding.svob,binding.dvadprim,binding.piatprim,binding.stoprim);
             rezhim = 2;
         });
         binding.fivemin.setOnClickListener(v -> {
@@ -126,28 +123,28 @@ public class FirstFragment extends Fragment {
 
     void plus() {
         slogisButtonPressed = !slogisButtonPressed;
-        x1isButtonPressed = updateButtonStates(binding.xy1);
-        xx1isButtonPressed = updateButtonStates(binding.xxy1);
-        xxyyisButtonPressed = updateButtonStates(binding.xxyy1);
+        updateButtonStates(binding.xy1);
+        updateButtonStates(binding.xxy1);
+        updateButtonStates(binding.xxyy1);
         if (slogisButtonPressed) {
             binding.slog.setBackgroundColor(pitchh);
             binding.xy1.setOnClickListener((v -> {
                 toggleButtonState(binding.xy1, x1isButtonPressed);
-                xx1isButtonPressed = updateButtonStates(binding.xxy1);
-                xxyyisButtonPressed = updateButtonStates(binding.xxyy1);
-                slogS =  1;
+                updateButtonStates(binding.xxy1);
+                updateButtonStates(binding.xxyy1);
+                zadacha[0] =  1;
             }));
             binding.xxy1.setOnClickListener((v -> {
                 toggleButtonState(binding.xxy1, xx1isButtonPressed);
-                x1isButtonPressed = updateButtonStates(binding.xy1);
-                xxyyisButtonPressed = updateButtonStates(binding.xxyy1);
-                slogS = 2;
+                updateButtonStates(binding.xy1);
+                updateButtonStates(binding.xxyy1);
+                zadacha[0] = 2;
             }));
             binding.xxyy1.setOnClickListener((v -> {
                 toggleButtonState(binding.xxyy1, xxyyisButtonPressed);
-                x1isButtonPressed = updateButtonStates(binding.xy1);
-                xx1isButtonPressed = updateButtonStates(binding.xxy1);
-                slogS =  3;
+                updateButtonStates(binding.xy1);
+                updateButtonStates(binding.xxy1);
+                zadacha[0] =  3;
             }));
 
         } else {
@@ -158,34 +155,34 @@ public class FirstFragment extends Fragment {
             });
             binding.xxyy1.setOnClickListener(v -> {
             });
-            slogS = 0;
+            zadacha[0] = 0;
         }
     }
 
     void minus() {
         vichisButtonPressed = !vichisButtonPressed;
-        x2isButtonPressed = updateButtonStates(binding.xy2);
-        xx2isButtonPressed = updateButtonStates(binding.xxy2);
-        xxyy2isButtonPressed = updateButtonStates(binding.xxyy2);
+        updateButtonStates(binding.xy2);
+        updateButtonStates(binding.xxy2);
+        updateButtonStates(binding.xxyy2);
         if (vichisButtonPressed) {
             binding.vich.setBackgroundColor(pitchh);
             binding.xy2.setOnClickListener((v -> {
                 toggleButtonState(binding.xy2, x2isButtonPressed);
-                xx2isButtonPressed = updateButtonStates(binding.xxy2);
-                xxyy2isButtonPressed = updateButtonStates(binding.xxyy2);
-                vichS =  1;
+                updateButtonStates(binding.xxy2);
+                updateButtonStates(binding.xxyy2);
+                zadacha[1] =  1;
             }));
             binding.xxy2.setOnClickListener((v -> {
                 toggleButtonState(binding.xxy2, xx2isButtonPressed);
-                x2isButtonPressed = updateButtonStates(binding.xy2);
-                xxyy2isButtonPressed = updateButtonStates(binding.xxyy2);
-                vichS = 2;
+                updateButtonStates(binding.xy2);
+                updateButtonStates(binding.xxyy2);
+                zadacha[1] = 2;
             }));
             binding.xxyy2.setOnClickListener((v -> {
                 toggleButtonState(binding.xxyy2, xxyy2isButtonPressed);
-                x2isButtonPressed = updateButtonStates(binding.xy2);
-                xx2isButtonPressed = updateButtonStates(binding.xxy2);
-                vichS = 3;
+                updateButtonStates(binding.xy2);
+                updateButtonStates(binding.xxy2);
+                zadacha[1] = 3;
             }));
 
         } else {
@@ -196,26 +193,26 @@ public class FirstFragment extends Fragment {
             });
             binding.xxyy2.setOnClickListener(v -> {
             });
-            vichS = 0;
+            zadacha[1] = 0;
         }
 
     }
 
     void umnozenie() {
         ymnisButtonPressed = !ymnisButtonPressed;
-        x3isButtonPressed = updateButtonStates(binding.xy3);
-        xx3isButtonPressed = updateButtonStates(binding.xxy3);
+        updateButtonStates(binding.xy3);
+        updateButtonStates(binding.xxy3);
         if (ymnisButtonPressed) {
             binding.ymn.setBackgroundColor(pitchh);
             binding.xy3.setOnClickListener((v -> {
                 toggleButtonState(binding.xy3, x3isButtonPressed);
-                xx3isButtonPressed = updateButtonStates(binding.xxy3);
-                umnS = 1;
+                updateButtonStates(binding.xxy3);
+                zadacha[2] = 1;
             }));
             binding.xxy3.setOnClickListener((v -> {
                 toggleButtonState(binding.xxy3, xx3isButtonPressed);
-                x3isButtonPressed = updateButtonStates(binding.xy3);
-                umnS =  2;
+                updateButtonStates(binding.xy3);
+                zadacha[2] =  2;
             }));
 
         } else {
@@ -224,25 +221,25 @@ public class FirstFragment extends Fragment {
             });
             binding.xxy3.setOnClickListener(v -> {
             });
-            umnS = 0;
+            zadacha[2] = 0;
         }
     }
 
     void delenie() {
         delhisButtonPressed = !delhisButtonPressed;
-        x4isButtonPressed = updateButtonStates(binding.xy4);
-        xx4isButtonPressed = updateButtonStates(binding.xxy4);
+        updateButtonStates(binding.xy4);
+        updateButtonStates(binding.xxy4);
         if (delhisButtonPressed) {
             binding.del.setBackgroundColor(pitchh);
             binding.xy4.setOnClickListener((v -> {
                 toggleButtonState(binding.xy4, x4isButtonPressed);
-                xx4isButtonPressed = updateButtonStates(binding.xxy4);
-                delS =  1;
+                updateButtonStates(binding.xxy4);
+                zadacha[3] =  1;
             }));
             binding.xxy4.setOnClickListener((v -> {
                 toggleButtonState(binding.xxy4, xx4isButtonPressed);
-                x4isButtonPressed = updateButtonStates(binding.xy4);
-                delS =  2;
+                updateButtonStates(binding.xy4);
+                zadacha[3] =  2;
             }));
 
 
@@ -252,7 +249,7 @@ public class FirstFragment extends Fragment {
             });
             binding.xxy4.setOnClickListener(v -> {
             });
-            delS = 0;
+            zadacha[3] = 0;
         }
     }
 
