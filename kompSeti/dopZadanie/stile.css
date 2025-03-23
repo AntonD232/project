@@ -1,0 +1,34 @@
+body {
+    max-width: 2000px;
+.list {
+    width: 1300px; 
+    height: 200px; 
+    overflow-y: auto; 
+    padding: 10px; 
+    background-color: #696969; 
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding: 5px; 
+}
+.but {
+    padding: 6px 20px;
+    margin: 10px;
+    margin-left: 665px;
+    font-size: 20px; 
+    color: #696969; 
+    background-color: #BC8F8F; 
+    border: 0; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+.but:hover {
+    background-color: #2F4F4F; 
+}
+a {
+    color: #293133;  
+}
+}
