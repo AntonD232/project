@@ -1,3 +1,5 @@
+import org.junit.platform.commons.util.ToStringBuilder;
+
 import java.util.Scanner;
 
 public class Main {
@@ -53,14 +55,16 @@ public class Main {
                     chislo2 = in.next();
                     switch (deistv) {
                         case 1:
-                            System.out.println(SlozhenieVdv(chislo1,chislo2));
+                            System.out.println(SlozhenieVdv(chislo1, chislo2));
                             break;
                         case 2:
+                            System.out.println(slozhenieVShes(chislo1, chislo2));
                             break;
                         case 3:
-                            System.out.println(vichitanieVdv(chislo1,chislo2));
+                            System.out.println(vichitanieVdv(chislo1, chislo2));
                             break;
                         case 4:
+                            System.out.println(vichitanieVShes(chislo1, chislo2));
                             break;
                     }
                     break;
@@ -186,6 +190,112 @@ public class Main {
             }
         }
         return d.reverse().toString();
+    }
+    private static String vichitanieVShes(String chislo, String chislo2) {
+        char c, c2;
+        while (chislo.length() < chislo2.length()) {
+            chislo = "0" + chislo;
+        }
+        while (chislo2.length() < chislo.length()) {
+            chislo2 = "0" + chislo2;
+        }
+        String num = "";
+        StringBuilder res =new StringBuilder();
+        int s3=0;
+        for (int i = chislo.length() - 1; i >= 0; i--) {
+            c = chislo.charAt(i);
+            c2 = chislo2.charAt(i);
+            int s, s2;
+            if (c >= '0' && c <= '9')
+                s = c - '0';
+            else s = c - 'A' + 10;
+            if (c2 >= '0' && c2 <= '9')
+                s2 = c2 - '0';
+            else s2 = c2 - 'A' + 10;
+            num = String.valueOf(s - s2-s3);
+            if(s-s2-s3<0) {
+                num = String.valueOf(s - s2-s3+16);
+                s3 = 1;
+            } else {
+                s3 = 0;
+            }
+            num = switch (num) {
+                case "1" -> "1";
+                case "2" -> "2";
+                case "3" -> "3";
+                case "4" -> "4";
+                case "5" -> "5";
+                case "6" -> "6";
+                case "7" -> "7";
+                case "8" -> "8";
+                case "9" -> "9";
+                case "10" -> "A";
+                case "11" -> "B";
+                case "12" -> "C";
+                case "13" -> "D";
+                case "14" -> "E";
+                case "15" -> "F";
+                default -> num;
+            };
+            res.append(num);
+        }
+        return res.reverse().toString();
+    }
+
+    private static String slozhenieVShes(String chislo, String chislo2) {
+        char c = 0, c2=0;
+        chislo="0"+chislo;
+        chislo2="0"+chislo2;
+        while (chislo.length() < chislo2.length()) {
+            chislo = "0" + chislo;
+        }
+        while (chislo2.length() < chislo.length()) {
+            chislo2 = "0" + chislo2;
+        }
+
+        String num;
+        StringBuilder res =new StringBuilder();
+        int s3=0;
+        for (int i = chislo.length() - 1; i >= 0; i--) {
+                c = chislo.charAt(i);
+                c2 = chislo2.charAt(i);
+            int s, s2;
+            if (c >= '0' && c <= '9')
+                s = c - '0';
+            else s = c - 'A' + 10;
+            if (c2 >= '0' && c2 <= '9')
+                s2 = c2 - '0';
+            else s2 = c2 - 'A' + 10;
+
+            num = String.valueOf(s + s2+s3);
+            if(s+s2+s3>15) {
+                num = String.valueOf(s + s2+s3-16);
+                s3 = 1;
+            }
+            else s3=0;
+            num = switch (num) {
+                case "1" -> "1";
+                case "2" -> "2";
+                case "3" -> "3";
+                case "4" -> "4";
+                case "5" -> "5";
+                case "6" -> "6";
+                case "7" -> "7";
+                case "8" -> "8";
+                case "9" -> "9";
+                case "10" -> "A";
+                case "11" -> "B";
+                case "12" -> "C";
+                case "13" -> "D";
+                case "14" -> "E";
+                case "15" -> "F";
+                default -> num;
+            };
+            res.append(num);
+        }if(res.charAt(res.length()-1)=='0'){
+            return res.reverse().substring(1).toString();
+        }else return res.reverse().toString();
+
     }
 
     private static String ShesVDes(String d) {
